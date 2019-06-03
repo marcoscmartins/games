@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="authoring-tool" content="Adobe_Animate_CC">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Cruzadinhas</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="cruzadinhas.js"></script>
+    <script src="core/common.js"></script>
+    <script src="core/content.js"></script>
+	<script src="core/display/display.js"></script>
+	<script src="core/settings/mousesettings.js"></script>
+	<script src="core/preloader/preloader.js"></script>
+	<script src="src/level.js"></script>
+    <script src="src/opcoes.js"></script>
+    <script src="src/informacoes.js"></script>
+    <script src="src/creditos.js"></script>
+    <script src="src/instrucoes.js"></script>
+    <script src="src/sucesso.js"></script>
+    <script src="src/finalizacao.js"></script>
+    <script src="src/gameover.js"></script>
+    <script src="src/ranking.js"></script>
+    <script src="src/ajuda.js"></script>
+    <script src="src/timer.js"></script>
+	<script src="main.js"></script>
+	<script>
+		var canvas, stage, exportRoot;
+		var game, abertura, btsettings, btinformacoes, level, opcoes, informacoes, instrucoes, creditos, sucesso, finalizacao, gameover, ranking, help;
+        var isFullscreen = false;
+        var allowMedia = true;
+        var middleX, middleY;
+        var music, sound;
+        var user;
+        var scores;
+        var users;
+
+		function init() 
+		{
+            canvas = document.getElementById("canvas");
+            stage = new createjs.Stage(canvas);
+            stage.enableMouseOver(30);
+            createjs.Ticker.setFPS(60);
+            createjs.Ticker.addEventListener("tick", tick); 
+            wide = window.innerWidth > Common.limitHorizontal;
+            //reset();
+            onResize();
+            preloader = new Preloader(manifest);
+            preloader.initialize();
+		}
+        
+        window.onunload = function()
+        {
+            stopSounds();
+        }
+
+		// MÉTODO CHAMADO QUANDO O PRELOADER TERMINA DE CARREGAR TODOS OS ASSETS
+		function inicializaGame()
+        {
+            if (!music)
+                music = playMusic("musica", -1, 0.5);
+
+            music.volume = 0.5;
+
+            setTimeout(playSound, 200, "titulosound");
+
+            Common.resetGame();
+            reset();
+        	game = new Game();
+            ranking = null;
+
+            stage.enableMouseOver();
+
+            if (createjs.Touch.isSupported()) {
+                createjs.Touch.enable(stage, false, true);
+            }
+
+            canvas.oncontextmenu = function(e) {
+                e.preventDefault();
+                return false;
+            }
+        	// botão configurações
+			btsettings = new Bitmap("settingsbutton", {x:0, y:0, width:60, height:60}, preloader.queue, true);
+			btsettings.on("click", settingsHandler);
+            // botão informacoes
+            btinformacoes = new Bitmap("infoSmall", {x:0, y:0, width:60, height:60}, preloader.queue, true);
+            btinformacoes.on("click", infoHandler);
+
+			MouseSettings.configure([btsettings, btinformacoes], "normal");
+
+        	stage.addChild(btsettings, btinformacoes, game);
+
+            btsettings.visible = false;
+            btinformacoes.visible = true;
+        }
+
+        function infoHandler(event)
+        {
+            if (informacoes || creditos)
+                return;
+
+            if (!informacoes)
+            {
+                informacoes = new Informacoes();
+                stage.addChild(informacoes);
+                informacoes.update();
+
+                playLateSound("pop", "informacoes", 200);
+            }
+        }
+
+        /*function rankingHandler(event)
+        {
+            if (ranking || opcoes || informacoes || creditos || instrucoes || help || gameover || finalizacao || sucesso)
+                return;
+            
+            playLateSound("pop", "ranking", 200);
+
+            ranking = new Ranking();
+            stage.addChild(ranking);
+        }*/
+
+		function settingsHandler(event)
+		{
+            if (opcoes || ranking || informacoes || creditos || instrucoes || help || gameover || finalizacao || sucesso)
+                return;
+
+            playLateSound("pop", "opcoes", 200);
+
+			opcoes = new Opcoes();
+			stage.addChild(opcoes);
+		}
+
+        // MÉTODO UTILIZADO PARA LIMPAR O JOGO E LEVÁ-LO AO SEU ESTADO INICIAL
+        function reset()
+        {
+            abertura = informacoes = creditos = opcoes = instrucoes = sucesso = gameover = finalizacao = ranking = null;
+        }
+
+        // MÉTODO DE ATUALIZAÇÃO
+        function tick(event)
+        {
+        	if (game)
+        		game.update();
+            if (opcoes)
+                opcoes.update();
+            if (creditos)
+                creditos.update();
+            if (btsettings)
+                btsettings.set({x:stage.width - 40, y:40});
+            if (btinformacoes)
+                btinformacoes.set({x:stage.width - 40, y:40});
+            if (informacoes)
+                informacoes.update();
+            if (ranking)
+                ranking.update();
+
+            if (music)
+                document.hasFocus() ? music.play() : stopSounds();
+
+        	stage.update();
+        }
+		
+		// FULLSCREEN
+        function toggleFullScreen() 
+        {
+            if (!document.fullscreenElement &&    // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+                isFullscreen = true;
+            } 
+            else 
+            {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+                isFullscreen = false;
+            }
+            
+            window.scrollTo(0, 1);
+            window.pageYOffset = 0;
+        }
+
+		// RESIZE
+		window.onresize = function()
+		{
+		    onResize();
+		}
+
+		function onResize()
+		{
+			// browser viewport size
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            // stage dimensions
+            var ow = 960; // your stage width
+            var oh = 550; // your stage height
+
+            horizontalScale = w / ow;
+            verticalScale = h / oh;
+            scale = Math.min(horizontalScale, verticalScale);
+
+		    stage.width = stage.canvas.width = window.innerWidth;
+		    stage.height = stage.canvas.height = window.innerHeight;
+
+		    middleX = stage.width * 0.5;
+		    middleY = stage.height * 0.5;
+
+		    stage.update();
+		}
+		/**
+         * @function isMobile
+         * detecta se o useragent e um dispositivo mobile
+         */
+        function isMobile()
+        {
+            var userAgent = navigator.userAgent.toLowerCase();
+            if( userAgent.search(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)!= -1 )
+                return true;
+            return false;
+        }
+        function stopSounds()
+        {
+            music.stop();
+            if (sound)
+                sound.stop();
+        }
+        function playSound(id) 
+        {
+            if (allowMedia)
+            {
+                if (sound)
+                    sound.stop();
+                sound = createjs.Sound.play(id, createjs.Sound.INTERRUPT_ANY);
+            }
+        }
+        function playLateSound(firstSound, id, delay)
+        {
+            if (allowMedia)
+                createjs.Sound.play(firstSound, createjs.Sound.INTERRUPT_ANY);
+
+            setTimeout(function() {
+                if (allowMedia) {
+                    if (sound) sound.stop();
+                    sound = createjs.Sound.play(id, createjs.Sound.INTERRUPT_ANY);
+                }
+            }, delay);
+        }
+        function playMusic(id, loop, volume) 
+        {
+            var m = null;
+            if (allowMedia)
+            {
+                m = createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+                m.volume = volume;
+            }
+            return m;
+        }
+	</script>
+	<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<canvas id="canvas" width="960" height="550"></canvas>
+</body>
+</html>

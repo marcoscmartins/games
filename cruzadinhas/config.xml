@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "br.com.noas.cruzadinhas"
+        versionCode = "48"
+        version   = "1.0.2">
+
+    <name>Cruzadinhas</name>
+
+    <description>
+        Complete as cruzadinhas de acordo com o nome das imagens.
+    </description>
+
+    <author href="http://www.noas.com.br" email="marcos@noas.com.br">
+        Noas Team
+    </author>
+
+    <gap:platform name="android" />
+
+    <preference name="permissions"                value="none"/>
+    <preference name="orientation"                value="landscape" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashMaintainAspectRatio" value="false" />            <!-- android -->
+
+    <preference name="android-minSdkVersion"      value="10" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="KeepRunning"                value="true"/>
+
+    <icon src="www/images/icone.fw.png" />
+    <icon src="www/icons/icon-36-ldpi.png"   platform="android"    density="ldpi" />
+    <icon src="www/icons/icon-48-mdpi.png"   platform="android"    density="mdpi" />
+    <icon src="www/icons/icon-72-hdpi.png"   platform="android"    density="hdpi" />
+    <icon src="www/icons/icon-96-xhdpi.png"  platform="android"    density="xhdpi" />
+    
+    <gap:splash src="www/screen/splash-LDPI.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="www/screen/splash-MDPI.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="www/screen/splash-HDPI.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="www/screen/splash-XHDPI.png" gap:platform="android" gap:density="xhdpi" />
+
+    <!-- <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" /> -->
+    <plugin name="cordova-plugin-whitelist" spec="1.1.0" />
+    <plugin name="cordova-plugin-splashscreen"/>
+    <!-- <plugin name="br.com.paveisitemas.splashscreen" spec="2.1.1" source="pgb" /> -->
+
+    <access origin="*"/> 
+    <access origin="https://code.createjs.com/createjs-2015.11.26.min.js"/> 
+    <allow-intent href="https://*/*"/>
+    <allow-navigation href="https://*/*"/>
+    <allow-navigation href="https://code.createjs.com/createjs-2015.11.26.min.js"/>
+
+</widget>

@@ -1,0 +1,116 @@
+%!Adobe-FontList 1.18
+%Locale:0x416
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\Bariol_Bold.eot
+FileModTime:1528905050
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Bariol-Bold
+FamilyName:Bariol
+StyleName:Bold
+FullName:Bariol Bold
+MenuName:Bariol Bold
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\github\Estacionamento\www\Font\Bariol_Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:83272
+FileModTime:1508405509
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Bariol Bold
+NameArray:0,Win,1,Bariol Bold
+NameArray:0,Win,16,Bariol
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\Bariol_Bold.svg
+FileModTime:1528905100
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Bariol-Bold
+FamilyName:Bariol
+StyleName:Bold
+FullName:Bariol-Bold
+MenuName:Bariol Bold
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\github\Estacionamento\www\Font\Bariol_Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:86812
+FileModTime:1528905070
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Bariol-Bold
+NameArray:0,Win,1,Bariol Bold
+NameArray:0,Win,16,Bariol
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\Bariol_Bold.woff
+FileModTime:1528905086
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\RifficFree-Bold_0.eot
+FileModTime:1528904948
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\RifficFree-Bold_0.svg
+FileModTime:1528904990
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:RifficFree-Bold
+FamilyName:Riffic Free
+StyleName:Bold
+FullName:Riffic Free Bold
+MenuName:Riffic Free Medium
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\github\Estacionamento\www\Font\RifficFree-Bold_0.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:98192
+FileModTime:1459366962
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Riffic Free Bold
+NameArray:0,Win,1,Riffic Free Medium
+NameArray:0,Win,16,Riffic Free
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:D:\github\Estacionamento\www\Font\RifficFree-Bold_0.woff
+FileModTime:1528904976
+%EndFont
+

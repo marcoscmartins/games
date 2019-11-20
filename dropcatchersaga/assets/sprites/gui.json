@@ -1,0 +1,502 @@
+{
+	"textures": [
+		{
+			"image": "gui.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1023,
+				"h": 427
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "gui/opening_title.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 500,
+						"h": 250
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 14,
+						"w": 472,
+						"h": 224
+					},
+					"frame": {
+						"x": 2,
+						"y": 2,
+						"w": 472,
+						"h": 224
+					}
+				},
+				{
+					"filename": "gui/opening_indicacao.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 9,
+						"w": 272,
+						"h": 62
+					},
+					"frame": {
+						"x": 478,
+						"y": 2,
+						"w": 272,
+						"h": 62
+					}
+				},
+				{
+					"filename": "gui/geraloff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 165,
+						"h": 65
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 7,
+						"w": 157,
+						"h": 58
+					},
+					"frame": {
+						"x": 754,
+						"y": 2,
+						"w": 157,
+						"h": 58
+					}
+				},
+				{
+					"filename": "gui/midiaoff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 10,
+						"w": 76,
+						"h": 82
+					},
+					"frame": {
+						"x": 915,
+						"y": 2,
+						"w": 76,
+						"h": 82
+					}
+				},
+				{
+					"filename": "gui/geralon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 165,
+						"h": 65
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 7,
+						"w": 157,
+						"h": 58
+					},
+					"frame": {
+						"x": 754,
+						"y": 64,
+						"w": 157,
+						"h": 58
+					}
+				},
+				{
+					"filename": "gui/opening_concentracao.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 280,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 9,
+						"w": 271,
+						"h": 62
+					},
+					"frame": {
+						"x": 478,
+						"y": 68,
+						"w": 271,
+						"h": 62
+					}
+				},
+				{
+					"filename": "gui/coin.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 12,
+						"w": 26,
+						"h": 26
+					},
+					"frame": {
+						"x": 995,
+						"y": 2,
+						"w": 26,
+						"h": 26
+					}
+				},
+				{
+					"filename": "gui/settings.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 9,
+						"w": 76,
+						"h": 82
+					},
+					"frame": {
+						"x": 915,
+						"y": 88,
+						"w": 76,
+						"h": 82
+					}
+				},
+				{
+					"filename": "gui/pessoaloff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 165,
+						"h": 65
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 7,
+						"w": 157,
+						"h": 58
+					},
+					"frame": {
+						"x": 753,
+						"y": 126,
+						"w": 157,
+						"h": 58
+					}
+				},
+				{
+					"filename": "gui/fulloff.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 914,
+						"y": 174,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/pessoalon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 165,
+						"h": 65
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 7,
+						"w": 157,
+						"h": 58
+					},
+					"frame": {
+						"x": 478,
+						"y": 134,
+						"w": 157,
+						"h": 58
+					}
+				},
+				{
+					"filename": "gui/fullon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 639,
+						"y": 134,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/ok.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 160,
+						"h": 75
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 156,
+						"h": 69
+					},
+					"frame": {
+						"x": 478,
+						"y": 196,
+						"w": 156,
+						"h": 69
+					}
+				},
+				{
+					"filename": "gui/opening_play.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 144,
+						"h": 160
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 10,
+						"w": 130,
+						"h": 141
+					},
+					"frame": {
+						"x": 719,
+						"y": 188,
+						"w": 130,
+						"h": 141
+					}
+				},
+				{
+					"filename": "gui/home.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 638,
+						"y": 259,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/position.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 54,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 51,
+						"h": 40
+					},
+					"frame": {
+						"x": 853,
+						"y": 188,
+						"w": 51,
+						"h": 40
+					}
+				},
+				{
+					"filename": "gui/silver.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 65,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 6,
+						"w": 51,
+						"h": 39
+					},
+					"frame": {
+						"x": 853,
+						"y": 232,
+						"w": 51,
+						"h": 39
+					}
+				},
+				{
+					"filename": "gui/informations.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 908,
+						"y": 259,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/bronze.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 65,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 5,
+						"w": 40,
+						"h": 40
+					},
+					"frame": {
+						"x": 853,
+						"y": 275,
+						"w": 40,
+						"h": 40
+					}
+				},
+				{
+					"filename": "gui/instructions.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 718,
+						"y": 333,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/midiaon.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 798,
+						"y": 333,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/ranking.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 10,
+						"w": 76,
+						"h": 81
+					},
+					"frame": {
+						"x": 878,
+						"y": 344,
+						"w": 76,
+						"h": 81
+					}
+				},
+				{
+					"filename": "gui/gold.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 65,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 6,
+						"w": 62,
+						"h": 44
+					},
+					"frame": {
+						"x": 958,
+						"y": 344,
+						"w": 62,
+						"h": 44
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.0"
+	}
+}

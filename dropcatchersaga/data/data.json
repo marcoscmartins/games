@@ -1,0 +1,31 @@
+{
+    "letters" : ["ã","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","ó","p","q","r","s","t","u","v","w","x","y","z"],
+    "diminutive" : {
+        "level1" : ["casinha","laranjinha","mamãozinho","almofadinha","anjinho","formiguinha","cenourinha","passarinho","florzinha"],
+        "level2" : ["abelhinha","bruxinha","janelinha","cobrinha","corujinha","cadeirinha","cajuzinho","fadinha","dentinho"],
+        "level3" : ["folhinha","dadinho","girafinha","agendinha","estrelinha","leãozinho","peixinho","borboletinha","grilinho"],
+        "level4" : ["gatinho","bolinha","porquinho","uvinha","bananinha","nuvenzinha","cachorrinho","bebezinho","bonequinha"],
+        "level5" : ["carrinho","robozinho","xicarazinha","ovinho","lanterninha","lapisinho","pracinha","coelhinho","botinha"],
+        "level6" : ["zebrinha","fantasminha","linguicinha","coqueirinho","galinhinha","barraquinha","eguinha","arvorezinha","bicicletinha"],
+        "level7" : ["fogãozinho","vestidinho","velinha","tesourinha","sabonetinho","moranguinho","vaquinha","bolinho","tartaruguinha"],
+        "level8" : ["reloginho","presentinho","queijinho","ovelhinha","trenzinho","boquinha","milhinho", "franguinho", "mamadeirinha"],
+        "level9" : ["minhoquinha","elefantinho","macaquinho","docinho","pãozinho","gelatininha","livrinho", "tigelinha", "borrachinha"],
+        "level10" : ["chavinha","violãozinho","cestinha","olhinho","baleinha","carneirinho","mochilinha", "foguetinho", "jarrinha"],
+        "level11" : ["colherzinha","toalhinha","mangueirinha","faquinha","cadeadinho","pardalzinho","igrejinha", "quiabinho", "pirulitinho"],
+        "level12" : ["tampinha","patinho","caranguejinho","tortinha","aranhinha","petequinha","tatuzinho", "caderninho", "televisãozinha"]
+    },
+    "words" : {
+        "level1" : ["casa","laranja","mamão","almofada","anjo","formiga","cenoura","pássaro","flor"],
+        "level2" : ["abelha","bruxa","janela","cobra","coruja","cadeira","cajú","fada","dente"],
+        "level3" : ["folha","dado","girafa","agenda","estrela","leão","peixe","borboleta","grilo"],
+        "level4" : ["gato","bola","porco","uva","banana","nuvem","cachorro","bebê","boneca"],
+        "level5" : ["carro","robô","xícara","ovo","lanterna","lápis","praça","coelho","bota"],
+        "level6" : ["zebra","fantasma","linguiça","coqueiro","galinha","barraca","égua","árvore","bicicleta"],
+        "level7" : ["fogão","vestido","vela","tesoura","sabonete","morango","vaca","bolo","tartaruga"],
+        "level8" : ["relógio","presente","queijo","ovelha","trem","boca","milho", "frango", "mamadeira"],
+        "level9" : ["minhoca","elefante","macaco","doce","pão","gelatina","livro", "tigela", "borracha"],
+        "level10" : ["chave","violão","cesta","olho","baleia","carneiro","mochila", "foguete", "jarra"],
+        "level11" : ["colher","toalha","mangueira","faca","cadeado","pardal","igreja", "quiabo", "pirulito"],
+        "level12" : ["tampa","pato","caranguejo","torta","aranha","peteca","tatu", "caderno", "televisão"]
+    }
+}

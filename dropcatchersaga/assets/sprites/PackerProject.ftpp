@@ -2,10 +2,10 @@
   "meta": {
     "version": "0.6.0"
   },
-  "savePath": "D:\\repo\\bitbucket\\phasermodel\\assets\\sprites",
+  "savePath": "D:\\repo\\github\\games\\dropcatchersaga\\assets\\sprites",
   "images": [],
   "folders": [
-    "D:/repo/bitbucket/phasermodel/assets/gui"
+    "D:/repo/github/games/dropcatchersaga/assets/gui"
   ],
   "packOptions": {
     "textureName": "gui",
@@ -19,7 +19,7 @@
     "filter": "none",
     "exporter": "Phaser 3",
     "fileName": "pack-result",
-    "savePath": "D:\\repo\\bitbucket\\phasermodel\\assets\\sprites",
+    "savePath": "D:\\repo\\github\\games\\dropcatchersaga\\assets\\sprites",
     "width": 1024,
     "height": 1024,
     "fixedSize": false,

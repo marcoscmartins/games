@@ -1,6 +1,6 @@
 # Games
 
-### Estes são alguns dos projetos de games que eu desenvolvi utilizando Animate CC ou Phaser 2.x
+Estes são alguns dos projetos de games que eu desenvolvi utilizando Animate CC ou Phaser 2.x
 
 ## Cruzadinhas
 <p align="center">

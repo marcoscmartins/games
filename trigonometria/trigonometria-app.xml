@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- 
+	Usage:
+
+	To localize the description, use the following format for the description element.
+	<description>
+	<text xml:lang="en">English App description goes here</text>
+	<text xml:lang="fr">French App description goes here</text>
+	<text xml:lang="ja">Japanese App description goes here</text>
+	</description>
+
+	To localize the name, use the following format for the name element.
+	<name>
+	<text xml:lang="en">English App name goes here</text>
+	<text xml:lang="fr">French App name goes here</text>
+	<text xml:lang="ja">Japanese App name goes here</text>
+	</name>
+-->
+<application xmlns="http://ns.adobe.com/air/application/14.0">
+  <id>com.noas.trigonometria</id>
+  <versionNumber>1.0.0</versionNumber>
+  <versionLabel/>
+  <filename>Trigonometria</filename>
+  <description/>
+  <name>Trigonometria</name>
+  <copyright/>
+  <initialWindow>
+    <content>trigonometria.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <fullScreen>true</fullScreen>
+    <aspectRatio>landscape</aspectRatio>
+    <renderMode>gpu</renderMode>
+    <autoOrients>true</autoOrients></initialWindow>
+  <icon>
+    <image36x36>icons/icon-36-ldpi.png</image36x36>
+    <image48x48>icons/icon-48-mdpi.png</image48x48>
+    <image72x72>icons/icon-72-hdpi.png</image72x72>
+    <image96x96>icons/icon-96-xhdpi.png</image96x96>
+  </icon>
+  <customUpdateUI>false</customUpdateUI>
+  <allowBrowserInvocation>false</allowBrowserInvocation>
+  <android>
+    <manifestAdditions><![CDATA[<manifest>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+</manifest>]]></manifestAdditions>
+  </android>
+  <supportedLanguages>pt</supportedLanguages>
+</application>
